@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   env: {
     node: true
   },
@@ -44,5 +44,3 @@ const config = {
     '@typescript-eslint/no-unused-vars': 'off'
   }
 };
-
-module.exports = config;
