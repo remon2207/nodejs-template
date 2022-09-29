@@ -1,4 +1,11 @@
 # nodejs-template
-自分用のNode.jsテンプレートの起点
 
-REST APIを使用したい場合は、`rest-api`ブランチを使用
+## STEP 1
+以下のコマンドを実行する
+```
+npm i
+cp .env.example .env
+```
+
+## STEP 2
+.envファイルに環境変数を入力する
