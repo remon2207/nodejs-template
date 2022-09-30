@@ -1,8 +1,11 @@
 {
-  "verbose": true,
   "ignore": [".git", "node_modules"],
+  "execMap": {
+    "ts": "ts-node -r tsconfig-paths/register"
+  },
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js"
+  "watch": ["src"],
+  "ext": "ts"
 }
