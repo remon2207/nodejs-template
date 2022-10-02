@@ -29,7 +29,6 @@ module.exports = {
   },
   rules: {
     'object-shorthand': 'error',
-    'import/prefer-default-export': 'off',
     'import/order': [
       'error',
       {
