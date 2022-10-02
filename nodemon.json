@@ -1,11 +1,10 @@
 {
   "ignore": [".git", "node_modules"],
   "execMap": {
-    "ts": "ts-node -r tsconfig-paths/register"
+    "js": "node ./dist/main.js"
   },
   "env": {
     "NODE_ENV": "development"
   },
-  "watch": ["src"],
-  "ext": "ts"
+  "ext": "js"
 }
