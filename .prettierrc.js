@@ -1,8 +1,8 @@
 const config = {
   endOfLine: 'lf',
   trailingComma: 'none',
-  printWidth: 120,
-  singleQuote: true
-};
+  singleQuote: true,
+  semi: false
+}
 
-module.exports = config;
+module.exports = config

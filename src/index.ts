@@ -1,15 +1,19 @@
-import 'dotenv/config';
-import http from 'http';
+import 'dotenv/config'
+import http from 'http'
 
-import { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault, gql } from 'apollo-server-core';
-import { ApolloServer } from 'apollo-server-express';
-import express from 'express';
+import {
+  ApolloServerPluginDrainHttpServer,
+  ApolloServerPluginLandingPageLocalDefault,
+  gql
+} from 'apollo-server-core'
+import { ApolloServer } from 'apollo-server-express'
+import express from 'express'
 
-const port = process.env.PORT;
+const port = process.env.PORT
 
 const hello = {
   title: 'Hello, World!'
-};
+}
 
 const typeDefs = gql`
   type Hello {
@@ -19,17 +23,17 @@ const typeDefs = gql`
   type Query {
     hello: Hello
   }
-`;
+`
 
 const resolvers = {
   Query: {
     hello: () => hello
   }
-};
+}
 
 async function startApolloServer() {
-  const app = express();
-  const httpServer = http.createServer(app);
+  const app = express()
+  const httpServer = http.createServer(app)
   const server = new ApolloServer({
     typeDefs,
     resolvers,
@@ -39,11 +43,11 @@ async function startApolloServer() {
       ApolloServerPluginDrainHttpServer({ httpServer }),
       ApolloServerPluginLandingPageLocalDefault({ embed: true })
     ]
-  });
-  await server.start();
-  server.applyMiddleware({ app });
-  httpServer.listen(port);
-  console.log(`🚀 Server ready at http://localhost:8000${server.graphqlPath}`);
+  })
+  await server.start()
+  server.applyMiddleware({ app })
+  httpServer.listen(port)
+  console.log(`🚀 Server ready at http://localhost:8000${server.graphqlPath}`)
 }
 
-startApolloServer().catch((e) => console.error(e));
+startApolloServer().catch((e) => console.error(e))
