@@ -1,5 +1,5 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 
 const config = {
   entry: path.resolve(__dirname, 'src/index.ts'),
@@ -23,6 +23,6 @@ const config = {
     ]
   },
   externals: nodeExternals()
-};
+}
 
-module.exports = config;
+module.exports = config

@@ -52,6 +52,6 @@ const config = {
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/no-unused-vars': 'off'
   }
-};
+}
 
-module.exports = config;
+module.exports = config
