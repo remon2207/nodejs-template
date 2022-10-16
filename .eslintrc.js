@@ -33,7 +33,16 @@ const config = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type'
+        ],
         alphabetize: {
           order: 'asc'
         },
@@ -43,6 +52,6 @@ const config = {
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/no-unused-vars': 'off'
   }
-};
+}
 
-module.exports = config;
+module.exports = config
