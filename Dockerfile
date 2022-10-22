@@ -1,4 +1,4 @@
-FROM node:16.17.1-bullseye-slim
+FROM node:16.18.0-bullseye-slim
 
 ARG TIMEZONE="Asia/Tokyo"
 ENV TZ=${TIMEZONE}
