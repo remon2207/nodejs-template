@@ -9,7 +9,10 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "nodemon src/index.ts",
     "dev:build": "webpack --config webpack.dev.js",
-    "dev:watch": "webpack --watch --config webpack.dev.js & nodemon ./dist/main.js"
+    "dev:watch": "webpack --watch --config webpack.dev.js & nodemon ./dist/main.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "format": "prettier -w ./src"
   },
   "keywords": [],
   "author": "remon2207",
